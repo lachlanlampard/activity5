@@ -34,6 +34,7 @@ ex1_alphabet = {
 	'p' : 'p',
 }
 
+# ex1
 def monoalpha_cipher(new_alphabet, ex1_text):
 	for letter in ex1_text:
 		new_letter = new_alphabet.get(letter)
@@ -42,9 +43,11 @@ def monoalpha_cipher(new_alphabet, ex1_text):
 		else:
 			print(bcolors.WHITE + letter, end = '')
 
+# shift letter
 def shift(s, n):
      return ''.join(chr((ord(char) - 97 - n) % 26 + 97) for char in s)
 
+# ex2
 def poly_alphabetic(ex2_text):
 	count = 0
 	for letter in ex2_text:
@@ -65,6 +68,7 @@ def poly_alphabetic(ex2_text):
 		else:
 			print(letter, end = '')
 
+# print statements
 print('EXERCISE 1')
 monoalpha_cipher(ex1_alphabet, ex1_text)
 print(' ')
